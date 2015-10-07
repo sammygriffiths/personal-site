@@ -1,0 +1,12 @@
+@mixin load-sprite($sprite:sprite(one), $two-times-sprite:sprite(two)) {
+    background-image: $sprite;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 500px 200px;
+
+    @if $responsive{
+        @include retina {
+            background-image: $two-times-sprite;
+        }
+    }
+}

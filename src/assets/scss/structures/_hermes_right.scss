@@ -1,0 +1,24 @@
+@mixin hermes-right($article-element: figure, $sidebar-element: aside){
+    @include structure;
+
+    #{$article-element}{
+        @include cols(1.5/4, $column-margin);
+        float: left;
+    }
+
+    #{$sidebar-element}{
+        @include cols(1/4, $column-margin);
+        float: right;
+        margin-right: 0;
+    }
+
+    @include breakpoint(s) {
+        #{$sidebar-element}, #{$article-element}{
+            float: none;
+            width: 100%;
+            margin-right: 0;
+            display: block;
+            margin-bottom: $mobile-column-margin;
+        }
+    }
+}

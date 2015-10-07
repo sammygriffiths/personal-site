@@ -1,0 +1,27 @@
+@mixin accordion{
+
+    ul{
+        padding: 0;
+
+        li{
+            list-style: none;
+
+            .accordion-head{
+                display: block;
+                padding: 10px 0;
+                text-decoration: none;
+
+                &:before{
+                    //Closed icon
+                }
+            }
+
+            .open{
+                
+                &:before{
+                    //Open icon
+                }
+            }
+        }
+    }
+}

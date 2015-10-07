@@ -1,0 +1,16 @@
+@mixin hermes($element: figure){
+    @include structure;
+
+    #{$element}{
+        @include cols(1/3, $column-margin);
+        float: left;
+
+        @include breakpoint(s) {
+            float: none;
+            width: 100%;
+            margin-bottom: $mobile-column-margin;
+            margin-right: 0;
+            display: block;
+        }
+    }
+}

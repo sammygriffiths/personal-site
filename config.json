@@ -1,0 +1,23 @@
+{
+    "development": {
+        "publicAssetsLocation" : "/assets/",
+        "AWSCloudfrontAccessKey": "APKAIUAA3GLOOQCBIBBQ",
+        "AWSCloudfrontPKFile": "/vagrant/keys/pk-APKAIUAA3GLOOQCBIBBQ.pem",
+        "AWSUserAccessKey": "",
+        "AWSUserSecretKey": ""
+    },
+    "staging": {
+        "publicAssetsLocation" : "",
+        "AWSCloudfrontAccessKey": "APKAIUAA3GLOOQCBIBBQ",
+        "AWSCloudfrontPKFile": "/vagrant/keys/pk-APKAIUAA3GLOOQCBIBBQ.pem",
+        "AWSUserAccessKey": "",
+        "AWSUserSecretKey": ""
+    },
+    "production": {
+        "publicAssetsLocation" : "",
+        "AWSCloudfrontAccessKey": "APKAIUAA3GLOOQCBIBBQ",
+        "AWSCloudfrontPKFile": "/vagrant/keys/pk-APKAIUAA3GLOOQCBIBBQ.pem",
+        "AWSUserAccessKey": "",
+        "AWSUserSecretKey": ""
+    }
+}

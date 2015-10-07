@@ -1,0 +1,6 @@
+@mixin animate($settings){
+    -webkit-animation: $settings; /* Safari 4+ */
+    -moz-animation: $settings; /* Fx 5+ */
+    -o-animation: $settings; /* Opera 12+ */
+    animation: $settings; /* IE 10+ */
+}

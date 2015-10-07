@@ -1,0 +1,49 @@
+@mixin poseidon-right($type: 'thirds', $article-element: article, $sidebar-element: aside){
+    @include structure;
+
+    #{$sidebar-element}{
+
+        @if $type == 'thirds' or $type == 1/3{
+            @include cols(1/3, $column-margin);
+        }
+        @else if $type == 'quaters' or $type == 1/4{
+            @include cols(1/4, $column-margin);
+        }
+        float: right;
+        margin-right: 0;
+
+
+
+        @include breakpoint(s) {
+            float: none;
+            width: 100%;
+            margin-right: 0;
+            display: block;
+            margin-bottom: $mobile-column-margin;
+            padding: 0;
+        }
+    }
+
+    #{$article-element}{
+        float: left;
+
+        @if $type == 'thirds' or $type == 1/3{
+            @include cols(2/3, $column-margin);
+        }
+        @else if $type == 'quaters' or $type == 1/4{
+            @include cols(3/4, $column-margin);
+        }
+
+
+
+
+        @include breakpoint(s) {
+            float: none;
+            width: 100%;
+            margin-bottom: $mobile-column-margin;
+            margin-right: 0;
+            display: block;
+            padding: 0;
+        }
+    }
+}

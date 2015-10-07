@@ -1,0 +1,23 @@
+body {
+    background-color: color(body);
+    color: color(two);
+    font-family: font(one);
+    min-width: size(container);
+    overflow-x: hidden;
+    
+    @media (max-width: size(container)) {
+        min-width: 0;
+    }
+}
+
+html{
+    overflow-x: scroll;
+   
+    @media (max-width: size(container)) {
+        overflow-x: auto;
+    }
+
+    @media (min-width: size(container)) {
+        overflow-x: auto;
+    }
+}

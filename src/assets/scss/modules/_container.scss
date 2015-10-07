@@ -1,0 +1,6 @@
+@mixin container($padding: 10px){
+    max-width: size(container);
+    padding: 0 $padding;
+    margin-right: auto;
+    margin-left: auto;
+}

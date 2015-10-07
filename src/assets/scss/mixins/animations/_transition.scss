@@ -1,0 +1,6 @@
+@mixin transition($settings: all 0.3s ease){
+    -webkit-transition: $settings;
+    -moz-transition: $settings;
+    -o-transition: $settings;
+    transition: $settings;
+}

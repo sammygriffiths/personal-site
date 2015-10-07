@@ -1,0 +1,6 @@
+//Write functions here
+var publicAssetsLocation = {{{publicAssetsLocation}}};
+
+$(document).ready(function(){
+	//Call functions here
+});

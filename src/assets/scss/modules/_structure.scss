@@ -1,0 +1,9 @@
+$column-margin: 2.1276%;
+$mobile-column-margin: 3.3333%;
+
+@mixin structure{
+    @include container;
+    margin-bottom: 20px;
+    @include clear-after;
+    margin-top: 20px;
+}

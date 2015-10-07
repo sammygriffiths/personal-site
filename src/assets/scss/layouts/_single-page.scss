@@ -1,0 +1,84 @@
+/******************************
+This is for when I have it as a 
+single page site, I may change it
+at some point, in which case I'll
+just un-include this file and do
+some fancy-dannery in the other
+files.
+*******************************/
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+main{
+    @include container;
+    @include poseidon('article, aside');
+    margin-top: calc((100vh - 373px) / 2);
+    margin-bottom: 0;
+    max-height: 100vh;
+    padding: 0 size(gutter);
+
+    @media (max-height:413px){
+        margin-top: 20px;
+    }
+}
+
+aside{
+    text-align: center;
+}
+
+article{
+    position: relative;
+    min-height: 373px;
+    padding-bottom: 60px;
+
+    > ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li{
+            font-size: 57px;
+            font-family: font(two);
+            line-height: 57px;
+            margin-bottom: 20px;
+
+            &:before{content: '[';}
+            &:after{content: ']';}
+            &:nth-of-type(3n + 1){color: color(three);}
+            &:nth-of-type(3n + 2){color: color(four);}
+            &:nth-of-type(3n + 3){color: color(five);}
+        }
+    }
+}
+
+p{
+    font-size: 32px;
+    font-weight: 200;
+}
+
+nav{
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    left: 0;
+
+    ul{
+        @include horizontal-nav;
+        padding: 0;
+        text-align: justify;
+        margin: 0;
+
+        &:after{
+            @include pseudo-block(inline);
+            width: 100%;
+            vertical-align: bottom;
+        }
+
+        li{
+            vertical-align: bottom;
+        }
+    }
+}

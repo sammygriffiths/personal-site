@@ -1,0 +1,12 @@
+@include animation(spin-animation){
+    0%   {}
+    100% { 
+        @include rotate(360deg);
+    }
+}
+
+
+@mixin spin-animation($duration, $spin-x: 0, $spin-y: 0){
+    @include transform-origin($spin-x, $spin-y); 
+    @include animate(spin-animation $duration infinite linear);
+}

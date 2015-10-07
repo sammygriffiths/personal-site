@@ -1,0 +1,14 @@
+@mixin span($fraction, $width: 100%){
+    width: (($fraction) * $width);
+}
+
+@mixin cols($fraction, $gutter: 5%, $width: 100%){
+    $gutter-amount: ((1 / ($fraction)) - 1);
+    width: (($fraction) * ($width - ($gutter-amount * $gutter)));
+    display: inline-block;
+    margin-right: $gutter;
+    
+    &.last{
+        margin-right: 0;
+    }
+}

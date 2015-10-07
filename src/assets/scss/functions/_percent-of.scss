@@ -1,0 +1,11 @@
+@function percent-of($size, $container){
+    @if (unitless($size)){
+        $size: $size * 1px;
+    }
+
+    @if (unitless($container)){
+        $container: $container * 1px;
+    }
+
+    @return ($size / $container) * 100%;
+}

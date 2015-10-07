@@ -1,0 +1,12 @@
+@mixin pseudo-block($type: block){
+    content: '';
+    @if $type == inline{
+        display: inline-block;
+    }
+    @else if $type == block{
+        display: block;
+    }
+    @else{
+        @warn "The pseudo-block mixin only accepts block or inline, thus #{$type} doesn't really make much sense."
+    }
+}

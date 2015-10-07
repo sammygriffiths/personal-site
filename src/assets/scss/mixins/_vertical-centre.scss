@@ -1,0 +1,8 @@
+@mixin vertical-centre($element){
+    display: table;
+
+    #{$element}{
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

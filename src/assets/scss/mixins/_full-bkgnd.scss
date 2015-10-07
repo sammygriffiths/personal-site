@@ -1,0 +1,15 @@
+@mixin full-bkgnd($bkgnd){
+    background: $bkgnd;
+    position: relative;
+
+    &:before{
+        position: absolute;
+        width: 10000px;
+        top: 0;
+        bottom: 0;
+        background: $bkgnd;
+        right: -5000px;
+        z-index: -2;
+        content: '';
+    }
+}

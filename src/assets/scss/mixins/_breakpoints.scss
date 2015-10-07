@@ -1,0 +1,7 @@
+@mixin breakpoint($point) {
+    @if $responsive{
+        @media (max-width: map-get($breakpoints, $point)) { 
+            @content; 
+        }
+    }
+}

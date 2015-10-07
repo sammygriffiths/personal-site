@@ -9,12 +9,17 @@
             float: none;
             width: 100%;
             margin-bottom: $mobile-column-margin;
-            margin-right: 0;
+            margin-right: auto;
+            margin-left: auto;
             display: block;
         }
 
         &:nth-child(2n){
             margin-right: 0;
+
+            @include breakpoint(s) {
+                margin-right: auto;
+            }
         }
     }
 }

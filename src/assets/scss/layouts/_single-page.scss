@@ -15,24 +15,40 @@ body{
 main{
     @include container;
     @include poseidon('article, aside');
-    margin-top: calc((100vh - 373px) / 2);
+    margin-top: calc((100vh - 383px) / 2);
     margin-bottom: 0;
     max-height: 100vh;
     padding: 0 size(gutter);
 
-    @media (max-height:413px){
-        margin-top: 20px;
+    @media (max-height:423px){
+        margin-top: size(gutter);
+    }
+
+    @include breakpoint(s) {
+        margin-top: size(gutter);
     }
 }
 
 aside{
     text-align: center;
+
+    img{
+        @include breakpoint(s) {
+            max-width: 150px;
+        }
+    }
 }
 
 article{
     position: relative;
     min-height: 373px;
     padding-bottom: 60px;
+
+    @include breakpoint(s) {
+        max-width: 320px;
+        padding-bottom: 0;
+        min-height: 0;
+    }
 
     > ul{
         list-style: none;
@@ -43,7 +59,18 @@ article{
             font-size: 57px;
             font-family: font(two);
             line-height: 57px;
-            margin-bottom: 20px;
+            margin-bottom: size(gutter);
+
+            @include breakpoint(m) {
+                font-size: 5.7vw;
+                line-height: 5.7vw
+            }
+
+            @include breakpoint(s) {
+                font-size: 35px;
+                line-height: 35px;
+                text-align: center;
+            }
 
             &:before{content: '[';}
             &:after{content: ']';}
@@ -57,6 +84,15 @@ article{
 p{
     font-size: 32px;
     font-weight: 200;
+
+    @include breakpoint(m) {
+        font-size: 3vw;
+    }
+
+    @include breakpoint(s) {
+        font-size: 25px;
+        text-align: center;
+    }
 }
 
 nav{
@@ -64,6 +100,10 @@ nav{
     right: 0;
     bottom: -20px;
     left: 0;
+
+    @include breakpoint(s) {
+        position: static;
+    }
 
     ul{
         @include horizontal-nav;

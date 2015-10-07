@@ -441,7 +441,7 @@ main {
   margin-left: auto;
   margin-bottom: 20px;
   margin-top: 20px;
-  margin-top: calc((100vh - 373px) / 2);
+  margin-top: calc((100vh - 383px) / 2);
   margin-bottom: 0;
   max-height: 100vh;
   padding: 0 20px; }
@@ -458,26 +458,41 @@ main {
     float: left; }
     main article.last, main aside.last {
       margin-right: 0; }
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       main article, main aside {
         float: none;
         width: 100%;
         margin-bottom: 3.3333%;
-        margin-right: 0;
+        margin-right: auto;
+        margin-left: auto;
         display: block; } }
     main article:nth-child(2n), main aside:nth-child(2n) {
       margin-right: 0; }
-  @media (max-height: 413px) {
+      @media (max-width: 600px) {
+        main article:nth-child(2n), main aside:nth-child(2n) {
+          margin-right: auto; } }
+  @media (max-height: 423px) {
+    main {
+      margin-top: 20px; } }
+  @media (max-width: 600px) {
     main {
       margin-top: 20px; } }
 
 aside {
   text-align: center; }
+  @media (max-width: 600px) {
+    aside img {
+      max-width: 150px; } }
 
 article {
   position: relative;
   min-height: 373px;
   padding-bottom: 60px; }
+  @media (max-width: 600px) {
+    article {
+      max-width: 320px;
+      padding-bottom: 0;
+      min-height: 0; } }
   article > ul {
     list-style: none;
     padding: 0;
@@ -487,6 +502,15 @@ article {
       font-family: "musketbold";
       line-height: 57px;
       margin-bottom: 20px; }
+      @media (max-width: 996px) {
+        article > ul li {
+          font-size: 5.7vw;
+          line-height: 5.7vw; } }
+      @media (max-width: 600px) {
+        article > ul li {
+          font-size: 35px;
+          line-height: 35px;
+          text-align: center; } }
       article > ul li:before {
         content: '['; }
       article > ul li:after {
@@ -501,12 +525,22 @@ article {
 p {
   font-size: 32px;
   font-weight: 200; }
+  @media (max-width: 996px) {
+    p {
+      font-size: 3vw; } }
+  @media (max-width: 600px) {
+    p {
+      font-size: 25px;
+      text-align: center; } }
 
 nav {
   position: absolute;
   right: 0;
   bottom: -20px;
   left: 0; }
+  @media (max-width: 600px) {
+    nav {
+      position: static; } }
   nav ul {
     padding: 0;
     text-align: justify;

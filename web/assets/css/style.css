@@ -441,7 +441,7 @@ main {
   margin-left: auto;
   margin-bottom: 20px;
   margin-top: 20px;
-  margin-top: calc((100vh - 383px) / 2);
+  margin-top: calc((100vh - 373px) / 2);
   margin-bottom: 0;
   max-height: 100vh;
   padding: 0 20px; }
@@ -458,7 +458,7 @@ main {
     float: left; }
     main article.last, main aside.last {
       margin-right: 0; }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       main article, main aside {
         float: none;
         width: 100%;
@@ -468,31 +468,37 @@ main {
         display: block; } }
     main article:nth-child(2n), main aside:nth-child(2n) {
       margin-right: 0; }
-      @media (max-width: 600px) {
+      @media (max-width: 768px) {
         main article:nth-child(2n), main aside:nth-child(2n) {
-          margin-right: auto; } }
+          margin-right: auto;
+          margin-bottom: 0; } }
   @media (max-height: 423px) {
     main {
       margin-top: 20px; } }
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     main {
       margin-top: 20px; } }
 
 aside {
-  text-align: center; }
-  @media (max-width: 600px) {
+  text-align: center;
+  padding: 0 4.58984%; }
+  @media (max-width: 768px) {
     aside img {
-      max-width: 150px; } }
+      width: 150px; } }
 
 article {
   position: relative;
   min-height: 373px;
   padding-bottom: 60px; }
-  @media (max-width: 600px) {
+  @media (max-width: 996px) {
+    article {
+      min-height: 0; } }
+  @media (max-width: 768px) {
     article {
       max-width: 320px;
       padding-bottom: 0;
-      min-height: 0; } }
+      min-height: 0;
+      margin-bottom: 0; } }
   article > ul {
     list-style: none;
     padding: 0;
@@ -504,9 +510,9 @@ article {
       margin-bottom: 20px; }
       @media (max-width: 996px) {
         article > ul li {
-          font-size: 5.7vw;
-          line-height: 5.7vw; } }
-      @media (max-width: 600px) {
+          font-size: 5.5vw;
+          line-height: 5.5vw; } }
+      @media (max-width: 768px) {
         article > ul li {
           font-size: 35px;
           line-height: 35px;
@@ -528,7 +534,7 @@ p {
   @media (max-width: 996px) {
     p {
       font-size: 3vw; } }
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     p {
       font-size: 25px;
       text-align: center; } }
@@ -538,7 +544,7 @@ nav {
   right: 0;
   bottom: -20px;
   left: 0; }
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     nav {
       position: static; } }
   nav ul {
@@ -557,6 +563,12 @@ nav {
       width: 100%;
       vertical-align: bottom; }
     nav ul li {
+      display: inline-block;
       vertical-align: bottom; }
+    nav ul a {
+      display: inline-block; }
+    @media (max-width: 996px) {
+      nav ul img {
+        max-width: 50px; } }
 
 /*# sourceMappingURL=style.css.map */

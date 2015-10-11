@@ -15,7 +15,7 @@ body{
 main{
     @include container;
     @include poseidon('article, aside');
-    margin-top: calc((100vh - 383px) / 2);
+    margin-top: calc((100vh - 373px) / 2);
     margin-bottom: 0;
     max-height: 100vh;
     padding: 0 size(gutter);
@@ -31,10 +31,11 @@ main{
 
 aside{
     text-align: center;
+    padding: 0 percent-of(47, size(container));
 
     img{
         @include breakpoint(s) {
-            max-width: 150px;
+            width: 150px;
         }
     }
 }
@@ -44,10 +45,15 @@ article{
     min-height: 373px;
     padding-bottom: 60px;
 
+    @include breakpoint(m) {
+        min-height: 0;
+    }
+
     @include breakpoint(s) {
         max-width: 320px;
         padding-bottom: 0;
         min-height: 0;
+        margin-bottom: 0;
     }
 
     > ul{
@@ -62,8 +68,8 @@ article{
             margin-bottom: size(gutter);
 
             @include breakpoint(m) {
-                font-size: 5.7vw;
-                line-height: 5.7vw
+                font-size: 5.5vw;
+                line-height: 5.5vw
             }
 
             @include breakpoint(s) {
@@ -118,7 +124,19 @@ nav{
         }
 
         li{
+            display: inline-block;
             vertical-align: bottom;
+        }
+
+        a{
+            display: inline-block;
+        }
+
+        img{
+
+            @include breakpoint(m) {
+                max-width: 50px;
+            }
         }
     }
 }

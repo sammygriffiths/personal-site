@@ -5,3 +5,11 @@
         }
     }
 }
+
+@mixin breakheight($point) {
+    @if $responsive{
+        @media (max-height: map-get($breakpoints, $point)) { 
+            @content; 
+        }
+    }
+}

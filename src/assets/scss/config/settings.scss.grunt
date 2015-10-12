@@ -62,4 +62,6 @@ $sprites: (
 $breakpoints: (
     s: 768px,
     m: 996px,
+    hs: 490px,
+    hm: 490px,
 );

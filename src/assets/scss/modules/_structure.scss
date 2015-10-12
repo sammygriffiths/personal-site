@@ -1,5 +1,5 @@
 $column-margin: 2.1276%;
-$mobile-column-margin: 3.3333%;
+$mobile-column-margin: 20px;
 
 @mixin structure{
     @include container;
